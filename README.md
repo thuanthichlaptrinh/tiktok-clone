@@ -23,6 +23,7 @@
     - Cài đặt thư `viện sass: npm i -D sass`
     - Reset css: `npm install --save normalize.css`
     - Default CSS: font-family, font-size, line-height
+    - Cài thư viện classNames: `npm i classnames`
 
 # Cài đặt và cấu hình Router
 
