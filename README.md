@@ -23,3 +23,7 @@
     - Cài đặt thư `viện sass: npm i -D sass`
     - Reset css: `npm install --save normalize.css`
     - Default CSS: font-family, font-size, line-height
+
+# Cài đặt và cấu hình Router
+
+    - Lệnh: `npm i react-router-dom`
