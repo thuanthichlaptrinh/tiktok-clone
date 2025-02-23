@@ -36,3 +36,8 @@
     npm i --save @fortawesome/free-solid-svg-icons
     npm i --save @fortawesome/free-regular-svg-icons
     npm i --save @fortawesome/react-fontawesome
+
+# Cài đặt thư viện tippy
+
+    -   Dùng để làm tooltip, popper
+    -   Link: https://github.com/atomiks/tippyjs-react
