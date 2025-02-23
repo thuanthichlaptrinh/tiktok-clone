@@ -28,3 +28,11 @@
 # Cài đặt và cấu hình Router
 
     - Lệnh: `npm i react-router-dom`
+
+# Thêm thư viện FontAwesome
+
+-   Lệnh:
+    npm i --save @fortawesome/fontawesome-svg-core
+    npm i --save @fortawesome/free-solid-svg-icons
+    npm i --save @fortawesome/free-regular-svg-icons
+    npm i --save @fortawesome/react-fontawesome
