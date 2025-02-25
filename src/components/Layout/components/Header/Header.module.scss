@@ -52,6 +52,7 @@
         caret-color: var(--primary); // con nháy chuột
     }
 
+    // Hiện dấu gạch gần button search
     &::after {
         content: '';
         position: absolute;
@@ -62,6 +63,7 @@
         background-color: rgba(22, 24, 35, 0.12);
     }
 
+    // Khi focus vào thẻ input thì có border
     &:focus-within {
         border-color: rgba(22, 24, 35, 0.2);
     }
@@ -71,6 +73,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: rgba(22, 24, 35, 0.5);
+    padding-left: 12px;
 }
 
 .clear-btn,
@@ -99,4 +102,11 @@
     &:active {
         background-color: rgba(22, 24, 35, 0.06);
     }
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 24px;
+    padding: 4px 8px;
+    background-color: transparent;
 }
