@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
     faCircleXmark,
-    faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -22,9 +21,11 @@ import 'tippy.js/dist/tippy.css';
 import Button from '~/components/Button';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
-import image from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { MessageIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
@@ -100,7 +101,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={image.logo} alt="Tiktok" />
+                    <img src={images.logo} alt="Tiktok" />
                 </div>
 
                 <HeadLessTippy
@@ -134,8 +135,9 @@ function Header() {
                     {currentUser ? (
                         <>
                             <Tippy trigger="click" content="Upload video" placement="bottom">
-                                <button>
-                                    <FontAwesomeIcon className={cx('action-btn')} icon={faCloudUpload} />
+                                <button className={cx('action-btn')}>
+                                    <UploadIcon />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -148,10 +150,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/881d81df2bacb150bf2519f942d70645~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=be7e6a1d&x-expires=1741795200&x-signature=EA5cY7MAw77bSuC9FCywgs8gJxw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
+                            <Image
+                                src="https://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/03e7508177fb33a869e868fccca0fca1~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=d1429806&x-expires=1741863600&x-signature=mL2UYEXtgsy%2BTjSkfyLEJLIXm8o%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
                                 className={cx('user-avatar')}
                                 alt="user name"
+                                // fallback
                             />
                         ) : (
                             <button className={cx('more-btn')}>
