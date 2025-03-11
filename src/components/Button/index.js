@@ -25,7 +25,7 @@ function Button({
 
     const props = {
         onClick,
-        ...passProps,
+        ...passProps, // sẽ chứa các props ví dụ: target...
     };
 
     // Nếu btn có type disable thì không cho click

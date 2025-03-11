@@ -37,7 +37,8 @@ function Menu({ children, items = [], onChange = defautlFn }) {
 
     return (
         <Tippy
-            delay={[0, 700]} // hiện ngay và 500ms mới ẩn
+            delay={[0, 700]} // hiện ngay và 700ms mới ẩn
+            offset={[12, 8]} // chỉnh sửa tippy sang phải
             interactive
             placement="bottom-end"
             render={(attrs) => (
@@ -56,6 +57,7 @@ function Menu({ children, items = [], onChange = defautlFn }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
