@@ -45,3 +45,8 @@
 
     -   Dùng để làm tooltip, popper
     -   Link: https://github.com/atomiks/tippyjs-react
+
+# Thư viện Axios
+
+    - Gọi API từ trình duyệt
+    - Lệnh cài đặt: `npm install axios`
