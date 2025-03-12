@@ -51,6 +51,16 @@ function Search() {
         setShowResult(false);
     };
 
+    // Xử lý không cho người dùng nhập dấu cách khi bắt đầu
+    const handleChange = (e) => {
+        const search = e.target.value;
+
+        // Nếu không bắt đầu bằng dấu cách
+        if (!search.startsWith(' ')) {
+            setSearchValue(search);
+        }
+    };
+
     return (
         <HeadLessTippy
             visible={showResult && searchResult.length > 0} // Có kết quả thì mới hiện tippy
@@ -73,7 +83,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search accounts and videos"
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     onFocus={() => setShowResult(true)} // khi focus thì bật tippy lên
                 />
 
@@ -85,7 +95,7 @@ function Search() {
 
                 {loading && <FontAwesomeIcon className={cx('loading-icon')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>
@@ -94,3 +104,5 @@ function Search() {
 }
 
 export default Search;
+
+// onMouseDown={(e) => e.preventDefault()}: bỏ đi border khi nhấn vào btn search

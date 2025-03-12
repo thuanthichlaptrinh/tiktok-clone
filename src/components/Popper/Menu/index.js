@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 // Tạo 1 function trống dùng để gán cho onChange, Khi onChange ko được truyền vào thì sẽ không bị lỗi
 const defautlFn = () => {};
 
-function Menu({ children, items = [], onChange = defautlFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defautlFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -39,6 +39,7 @@ function Menu({ children, items = [], onChange = defautlFn }) {
         <Tippy
             delay={[0, 700]} // hiện ngay và 700ms mới ẩn
             offset={[12, 8]} // chỉnh sửa tippy sang phải
+            hideOnClick={hideOnClick} // Khi hover vào tippy và nhấn ra bên ngoài sẽ ko tắt
             interactive
             placement="bottom-end"
             render={(attrs) => (
