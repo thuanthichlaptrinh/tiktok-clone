@@ -62,44 +62,47 @@ function Search() {
     };
 
     return (
-        <HeadLessTippy
-            visible={showResult && searchResult.length > 0} // Có kết quả thì mới hiện tippy
-            interactive // Nhấn được vào tippy
-            render={(attrs) => (
-                <div className={cx('search-result')} tabIndex={-1} {...attrs}>
-                    <PopperWrapper>
-                        <h4 className={cx('search-title')}>Accounts</h4>
-                        {searchResult.map((result) => (
-                            <AccountItem key={result.id} data={result} />
-                        ))}
-                    </PopperWrapper>
-                </div>
-            )}
-            onClickOutside={handleHideResult}
-        >
-            <div className={cx('search')}>
-                <input
-                    ref={inputRef}
-                    value={searchValue}
-                    placeholder="Search accounts and videos"
-                    spellCheck={false}
-                    onChange={handleChange}
-                    onFocus={() => setShowResult(true)} // khi focus thì bật tippy lên
-                />
-
-                {!!searchValue && !loading && (
-                    <button className={cx('clear-btn')} onClick={handleClear}>
-                        <FontAwesomeIcon icon={faCircleXmark} />
-                    </button>
+        // sử dụng thẻ div ôm Tippy dể không bị warning
+        <div>
+            <HeadLessTippy
+                visible={showResult && searchResult.length > 0} // Có kết quả thì mới hiện tippy
+                interactive // Nhấn được vào tippy
+                render={(attrs) => (
+                    <div className={cx('search-result')} tabIndex={-1} {...attrs}>
+                        <PopperWrapper>
+                            <h4 className={cx('search-title')}>Accounts</h4>
+                            {searchResult.map((result) => (
+                                <AccountItem key={result.id} data={result} />
+                            ))}
+                        </PopperWrapper>
+                    </div>
                 )}
+                onClickOutside={handleHideResult}
+            >
+                <div className={cx('search')}>
+                    <input
+                        ref={inputRef}
+                        value={searchValue}
+                        placeholder="Search accounts and videos"
+                        spellCheck={false}
+                        onChange={handleChange}
+                        onFocus={() => setShowResult(true)} // khi focus thì bật tippy lên
+                    />
 
-                {loading && <FontAwesomeIcon className={cx('loading-icon')} icon={faSpinner} />}
+                    {!!searchValue && !loading && (
+                        <button className={cx('clear-btn')} onClick={handleClear}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+                    )}
 
-                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
-                    <SearchIcon />
-                </button>
-            </div>
-        </HeadLessTippy>
+                    {loading && <FontAwesomeIcon className={cx('loading-icon')} icon={faSpinner} />}
+
+                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
+                        <SearchIcon />
+                    </button>
+                </div>
+            </HeadLessTippy>
+        </div>
     );
 }
 

@@ -126,7 +126,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/03e7508177fb33a869e868fccca0fca1~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=d1429806&x-expires=1741863600&x-signature=mL2UYEXtgsy%2BTjSkfyLEJLIXm8o%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
+                                src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-1/480644834_1562916157701547_4234488127986584803_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=EN82RMy9d9gQ7kNvgHVUjXM&_nc_oc=AdhVBX15C-3L5ZOWUCd2BZNUMwp_9njoLC6h3G-eMQ4lGDKeAr4NP04tVyOCuLH3ooiCTJl1z0u-l0BN5iMYIGUH&_nc_zt=24&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=A3tn5s5QHCvWAnm-Xw_RQbv&oh=00_AYFMLbWSZcusM6iUiFQBa_YFZ6vhhi-sJ2sVaxCIaLFA_w&oe=67D77B04"
                                 className={cx('user-avatar')}
                                 alt="user name"
                                 // fallback
