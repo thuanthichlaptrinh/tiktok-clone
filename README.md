@@ -50,3 +50,5 @@
 
     - Gọi API từ trình duyệt
     - Lệnh cài đặt: `npm install axios`
+
+# Thư viện PropTypes

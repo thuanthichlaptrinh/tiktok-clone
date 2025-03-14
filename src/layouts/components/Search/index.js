@@ -6,10 +6,10 @@ import AccountItem from '~/components/AccountItem';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import { SearchIcon } from '~/components/Icons';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import { useDebouce } from '~/hook';
+import { useDebouce } from '~/hooks';
 
 const cx = classNames.bind(styles);
 
