@@ -89,7 +89,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <Link to={config.routes.home} className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <img src={images.logo} alt="VocabCards" />
                 </Link>
 
                 {/* Search */}
@@ -99,26 +99,26 @@ function Header() {
                     {/* Check user login */}
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Add Vocabulary" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <UploadIcon />
                                 </button>
                             </Tippy>
-                            <Tippy delay={[0, 50]} content="Message" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Study Groups" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <MessageIcon />
                                 </button>
                             </Tippy>
-                            <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Achievements" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
-                                    <span className={cx('badge')}>12</span>
+                                    <span className={cx('badge')}>3</span>
                                 </button>
                             </Tippy>
                         </>
                     ) : (
                         <>
-                            <Button text>Upload</Button>
+                            <Button text>Add Words</Button>
                             <Button primary>Log in</Button>
                         </>
                     )}
