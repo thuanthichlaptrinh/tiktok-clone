@@ -18,18 +18,29 @@ function Sidebar() {
         <aside className={cx('wrapper')}>
             <Menu>
                 <MenuItem
-                    title="For Your"
+                    title="Home"
                     to={config.routes.home}
                     icon={<HomeIcon />}
                     activeIcon={<HomeActiveIcon />}
                 />
                 <MenuItem
-                    title="Following"
-                    to={config.routes.following}
+                    title="Lessons"
+                    to={config.routes.lessons}
                     icon={<UserGroupIcon />}
                     activeIcon={<UserGroupActiveIcon />}
                 />
-                <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
+                <MenuItem 
+                    title="Games" 
+                    to={config.routes.games} 
+                    icon={<LiveIcon />} 
+                    activeIcon={<LiveActiveIcon />} 
+                />
+                <MenuItem 
+                    title="Progress" 
+                    to={config.routes.progress} 
+                    icon={<UserGroupIcon />} 
+                    activeIcon={<UserGroupActiveIcon />} 
+                />
             </Menu>
         </aside>
     );

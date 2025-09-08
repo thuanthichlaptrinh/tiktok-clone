@@ -1,9 +1,13 @@
 const routes = {
     home: '/',
-    following: '/following',
+    lessons: '/lessons',
     profile: '/@:nickname',
-    upload: '/upload',
+    games: '/games',
     search: '/search',
+    progress: '/progress',
+    // Legacy routes for backward compatibility
+    following: '/following',
+    upload: '/upload', 
     live: '/live',
 };
 
